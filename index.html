@@ -165,6 +165,7 @@
     <button class="item" onclick="removeItem(this, 'topic1')"><p>CABIN LIGHTS ........... AS REQUIRED</p></button>
     <button class="item" onclick="removeItem(this, 'topic1')"><p>FUEL AND PAYLOAD ............... SET</p></button>
     <button class="item" onclick="removeItem(this, 'topic1')"><p>IRS MODE SELECTORS ............. NAV</p></button>
+    <button class="item" onclick="removeItem(this, 'topic1')"><p>DSPL SELECTOR .............. HDG/STS</p></button>
     <button class="item" onclick="removeItem(this, 'topic1')"><p>YAW DAMPER ...................... ON</p></button>
     <button class="item" onclick="removeItem(this, 'topic1')"><p>EMERGENCY EXIT LIGHTS . GUARD CLOSED</p></button>
     <button class="item" onclick="removeItem(this, 'topic1')"><p>NO SMOKING ...................... ON</p></button>
@@ -179,15 +180,15 @@
 
 <div class="topic-box" id="topic2">
     <h2>FMC Configuration</h2>
-    <button class="item" onclick="removeItem(this, 'topic2')"><p>POS INIT ....................... SET</p></button>
-    <button class="item" onclick="removeItem(this, 'topic2')"><p>ROUTE 1/2 ...................... SET</p></button>
-    <button class="item" onclick="removeItem(this, 'topic2')"><p>ROUTE 2/2 ...................... SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><p>POS INIT> ...................... SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><p>RTE PAGE 1/2 ................... SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><p>RTE PAGE 2/2 ................... SET</p></button>
     <button class="item" onclick="removeItem(this, 'topic2')"><p>DEP/ARR ........................ SET</p></button>
     <button class="item" onclick="removeItem(this, 'topic2')"><p>LEGS ................... ROUTE CHECK</p></button>
-    <button class="item" onclick="removeItem(this, 'topic2')"><p>PERF INIT ...................... SET</p></button>
-    <button class="item" onclick="removeItem(this, 'topic2')"><p>TAKEOFF REF .................... SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><p>RTE/ PERF INIT> ................ SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><p>(RTE?) N1 LIMIT> TAKEOFF REF ... SET</p></button>
     <button class="item" onclick="removeItem(this, 'topic2')"><p>DES > FORECAST ................. SET</p></button>
-    <button class="item" onclick="removeItem(this, 'topic2')"><p>ATC CLEARANCE (IFR) .... AS REQUIRED</p></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><p>ATC CLEARANCE (IFR) ........ REQUEST</p></button>
     <button class="reset" onclick="resetTopic(this, 'topic2')"><p>Reset</p></button>
 </div>
 
@@ -199,6 +200,7 @@
     <button class="item" onclick="removeItem(this, 'topic3')"><p>IAS/MACH SPEED ............. SET V2</p></button>
     <button class="item" onclick="removeItem(this, 'topic3')"><p>VNAV/LNAV ...................... ON</p></button>
     <button class="item" onclick="removeItem(this, 'topic3')"><p>HDG/TAKEOFF RWY ............... SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic3')"><p>COURSE ........................ SET</p></button>
     <button class="item" onclick="removeItem(this, 'topic3')"><p>FLIGHT ALTITUDE ............... SET</p></button>
     <button class="item" onclick="removeItem(this, 'topic3')"><p>AUTO BRAKE .................... RTO</p></button>
     <button class="reset" onclick="resetTopic(this, 'topic3')"><p>Reset</p></button>
@@ -206,9 +208,9 @@
 
 <div class="topic-box" id="topic4">
     <h2>Pedestal Configuration</h2>
-    <button class="item" onclick="removeItem(this, 'topic4')"><p>COM RADIOS ..................... SET</p></button>
-    <button class="item" onclick="removeItem(this, 'topic4')"><p>FLIGHT-PLAN CLEARANCE ...... REQUEST</p></button>
-    <button class="item" onclick="removeItem(this, 'topic4')"><p>TRANSPONDER .................... SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic4')"><p><del>COM RADIOS</del> ..................... SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic4')"><p><del>FLIGHT-PLAN CLEARANCE</del> ...... REQUEST</p></button>
+    <button class="item" onclick="removeItem(this, 'topic4')"><p>TRANSPONDER ................... STBY</p></button>
     <button class="item" onclick="removeItem(this, 'topic4')"><p><del>FLT DK DOOR</del> ............ CLOSED/DENY</p></button>
     <button class="reset" onclick="resetTopic(this, 'topic4')"><p>Reset</p></button>
 </div>
@@ -251,7 +253,7 @@
     <button class="item" onclick="removeItem(this, 'topic7')"><p>ELEVATOR TRIM ..... SET FOR TAKE-OFF</p></button>
     <button class="item" onclick="removeItem(this, 'topic7')"><p>RECALL ....................... CHECK</p></button>
     <button class="item" onclick="removeItem(this, 'topic7')"><p>LOWER DISPLAY UNIT (DU) ........ OFF</p></button>
-    <button class="item" onclick="removeItem(this, 'topic7')"><p>ATC CLEARANCE (TAXI) ... AS REQUIRED</p></button>
+    <button class="item" onclick="removeItem(this, 'topic7')"><p>ATC CLEARANCE (TAXI) ....... REQUEST</p></button>
     <button class="item" onclick="removeItem(this, 'topic7')"><p>TAXI LIGHTS ..................... ON</p></button>
     <button class="item" onclick="removeItem(this, 'topic7')"><p>RUNWAY LIGHTS .......... AS REQUIRED</p></button>
     <button class="reset" onclick="resetTopic(this, 'topic7')"><p>Reset</p></button>
@@ -259,7 +261,7 @@
 
 <div class="topic-box" id="topic8">
     <h2>Before Take-off Checklist</h2>
-    <button class="item" onclick="removeItem(this, 'topic8')"><p>ATC CLEARANCE (DEPART) . AS REQUIRED</p></button>
+    <button class="item" onclick="removeItem(this, 'topic8')"><p>ATC CLEARANCE (DEPART) ..... REQUEST</p></button>
     <button class="item" onclick="removeItem(this, 'topic8')"><p>POSITION LIGHT ..... STROBE & STEADY</p></button>
     <button class="item" onclick="removeItem(this, 'topic8')"><p>TRANSPONDER .................. TA/RA</p></button>
     <button class="item" onclick="removeItem(this, 'topic8')"><p>LANDING LIGHTS .................. ON</p></button>
