@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BrNefi Checklist: B777-300er Quick!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&family=Urbanist:wght@100..900&display=swap" rel="stylesheet">
+<style>
+    p {
+        font-family: "Spline Sans Mono", monospace;
+        font-weight: 500;
+        font-size: 19px;
+        font-style: normal;
+        margin: 0;
+        color: #eeeeee;
+    }
+
+    h4 {
+        font-family: "Spline Sans Mono", monospace;
+        font-weight: 500;
+        font-size: 18px;
+        font-style: italic;
+        margin: 0;
+        color: #b4b4b4;
+    }
+
+    h3 {
+        font-family: "Urbanist", sans-serif;
+        font-weight: 630;
+        font-style: normal;
+        font-size: 42px;
+        color: #e7e7e7;
+        margin: auto;
+        margin-top: 30px;
+        width: 500px;
+        padding: 10px;
+        border-radius: 20px;
+        box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+        background-color: #14a5aa;
+    }
+
+    h1 {
+        font-family: "Spline Sans Mono", monospace;
+        font-weight: 550px;
+        font-style: normal;
+        font-size: 22px;
+        color: #15be7e;
+    }
+
+    body {
+            background-color: #13171d;
+            text-align: center;
+        }
+
+    h2 {
+        font-family: "Hepta Slab", serif;
+        font-weight: 630;
+        font-style: normal;
+        font-size: 28px;
+        color: #15b8be;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        transition: color 0.3s ease;
+    }
+
+    .reset p {
+        font-family: "Spline Sans Mono", monospace;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 20px;
+        color: #eeeeee;
+    }
+
+    .topic-box.completed h2 {
+        color: #111111;
+    }
+
+    .topic-box {
+        width: 500px;
+        margin: auto;
+        margin-top: 40px;
+        padding: 10px;
+        border-radius: 20px;
+        background-color: #222830;
+        box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+    }
+
+    .topic-box-final {
+        width: 500px;
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 1100px;
+        padding: 10px;
+        border-radius: 20px;
+        background-color: #222830;
+        box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+    }
+
+    .completed {
+        background-color: #1d1d1d;
+       /* background-color: #15be7e !important; Green */ 
+    }
+
+    .item {
+        display: block;
+        background-color: #2f3641;
+        color: #eeeeee;
+        border: none;
+        height: 40px;
+        width: 450px;
+        padding: 0px 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        margin: auto;
+        margin-bottom: 10px;
+        box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+        white-space: nowrap;
+    }
+
+    .item2 {
+        display: block;
+        background-color: #055830;
+        color: #eeeeee;
+        border: none;
+        height: 40px;
+        width: 450px;
+        padding: 0px 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        margin: auto;
+        margin-bottom: 10px;
+        box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+        white-space: nowrap;
+    }   
+
+    /*.item:hover {
+        background-color: #3d4655;
+    }*/
+   
+    .reset {
+        background-color: #572534;
+        color: #eeeeee;
+        border: none;
+        width: 200px;
+        margin-top: 25px;
+        margin-bottom: 5px;
+        height: 40px;
+        cursor: pointer;
+        box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        transition: color 0.3s ease;
+        transition: background-color 0.3s ease;
+
+    }
+
+    .completed .reset {
+    background-color: #141414;
+    color: #e7e7e7;
+    }
+
+    .completed .reset:hover {
+    background-color: #1d1d1d;
+    }
+
+    .reset:hover {
+    background-color: #682a3c;
+    }
+
+    .hidden {        
+        background-color: #141414;
+        /*background-color: #e94812;*/
+        /*display: none;*/
+    }
+</style>
+</head>
+<body>
+
+<h2>BrNefi CHECKLIST</h2>
+
+<div class="topic-box" id="topic0">
+    <button class="item" onclick="window.open('../atr/index.html', '_self')"><p>ATR 72-600</p></button>
+    <button class="item" onclick="window.open('../a310/index.html', '_self')"><p>A310-300</p></button>
+    <button class="item" onclick="window.open('../737/index.html', '_self')"><p>B737-800</p></button>
+    <button class="item" onclick="window.open('../737q/index.html', '_self')"><p>*B737-800*</p></button>
+    <button class="item" onclick="window.open('../777/index.html')"><p>B777-300er</p></button>
+    <button class="item" onclick="window.open('index.html', '_self')"><p>*B777-300er*</p></button>
+    <button class="reset" onclick="window.open('../index.html', '_self')"><p>Home</p></button>
+</div>
+
+<h3>B777-300er Quick!</h3>
+
+<div class="topic-box" id="topic1">
+    <h2>Cockpit Preparation</h2>
+    <button class="item" onclick="removeItem(this, 'topic1')"><h4><del>EFB: GROUND CONNECTIONS .... REQUEST</del></h4></button>
+    <button class="item" onclick="removeItem(this, 'topic1')"><h4><del>GROUND POWER/AIR COND UNITY/JETWAY</del></h4></button>
+    
+    <button class="item" onclick="removeItem(this, 'topic1')"><h4><del>ELECTRIC POWER UP ... SET APU OR GPU</del></h4></button>
+    <button class="item" onclick="removeItem(this, 'topic1')"><h4><del>BATERY ........................ ON</del></h4></button>
+    <button class="item" onclick="removeItem(this, 'topic1')"><h4><del>PRIM. AND SEC. EXT PWR ........ ON</del></h4></button>
+    <button class="item" onclick="removeItem(this, 'topic1')"><h4><del>EMERGENCY EXIT LIGHT ... GUARD CLOSE</del></h4></button>
+    <button class="item" onclick="removeItem(this, 'topic1')"><h4><del>PARKING BRAKE .................. SET</del></h4></button>
+
+    <button class="item" onclick="removeItem(this, 'topic1')"><h4><del>DSP: CHECKLIST ........... RESET ALL</del></h4></button>
+
+    <button class="item" onclick="removeItem(this, 'topic1')"><p>EFB: JETWAY ................ QEQUEST</p></button>
+    <button class="item" onclick="removeItem(this, 'topic1')"><p>EFB: DOOR MANAGEMENT ... DISARM/OPEN</p></button>
+    <button class="item" onclick="removeItem(this, 'topic1')"><p>EFB: GROUND MAINTENANCE ...... CHECK</p></button>
+    <button class="item" onclick="removeItem(this, 'topic1')"><p>DSP: BOTTOM STAT ..... SEL AND CHECK</p></button>
+    <button class="item" onclick="removeItem(this, 'topic1')"><h4>HYDRAULICS: NOT SHOW RF MESSAGE</h4></button>
+    <button class="item" onclick="removeItem(this, 'topic1')"><h4>OXYGEN: CREW PRESS > 1000</h4></button>
+    <button class="item" onclick="removeItem(this, 'topic1')"><p>DSP: BOTTOM ENGINE ... SEL AND CHECK</p></button>
+    <button class="item" onclick="removeItem(this, 'topic1')"><h4>OIL QTY > 17</h4></button>
+    
+    <button class="reset" onclick="resetTopic(this, 'topic1')"><p>Reset</p></button>
+</div>
+
+<div class="topic-box" id="topic2">
+    <h2>Preflight Procedure</h2>
+    
+    <button class="item" onclick="removeItem(this, 'topic2')"><h4><del>THRUST ASYMMETRY COMPENS ...... AUTO</del></h4></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><h4><del>IFE/PASS AND CABIN/UTILITY ...... ON</del></h4></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><h4><del>WINDOW HEAT ..................... ON</del></h4></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><h4><del>CARGO FIRE ...... OFF (EXTINGUISHED)</del></h4></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><h4><del>ENGINE EEC MODE ............. NORMAL</del></h4></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><h4><del>AUTOSTART ....................... ON</del></h4></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><h4><del>FUEL PUMPS ..................... OFF</del></h4></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><h4><del>ANTI-ICE ...................... AUTO</del></h4></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><h4><del>NAV LIGHT ....................... ON</del></h4></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><h4><del>LOGO LIGHT ............. AS REQUIRED</del></h4></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><h4><del>CARGO TEMP SEL .... ON (LOW OR HIGH)</del></h4></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><h4><del>EQUIP COOLING ................. AUTO</del></h4></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><h4><del>GASPER .......................... ON</del></h4></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><h4><del>RECIRC FANS UPER AND LOWER ... *OFF*</del></h4></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><h4><del>PACKS L AND R ................ *OFF*</del></h4></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><h4><del>TRIM AIR L AND R ................ ON</del></h4></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><h4><del>ISOLATION VALVES L - C - R .... AUTO</del></h4></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><h4><del>BLEED AIR ENG L AND R ........... ON</del></h4></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><h4><del>APU BLEED ..................... AUTO</del></h4></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><h4><del>OUTFLOW VALVE FWD AND AFT ..... AUTO</del></h4></button>
+    
+    <button class="item" onclick="removeItem(this, 'topic2')"><p>ADIRU ........................... ON</p></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><p>EFB: DATA FROM SIMBRIEF..... REQUEST</p></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><p>METAR AND ATIS INFO .. CHECK DEP/ARR</p></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><p>OXIGEN ........................ TEST</p></button>
+    <button class="reset" onclick="resetTopic(this, 'topic2')"><p>Reset</p></button>
+</div>
+    
+<div class="topic-box" id="topic3">
+    <h2>FMC Configuration</h2> 
+    <button class="item" onclick="removeItem(this, 'topic3')"><p>POS INIT> ...................... SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic3')"><p>RTE PAGE 1/2 ................... SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic3')"><h4>ORIGIN AND DEST .............. SET</h4></button>
+    <button class="item" onclick="removeItem(this, 'topic3')"><h4>ROUTE ................ REQUEST/SET</h4></button>
+    <button class="item" onclick="removeItem(this, 'topic3')"><h4>PAYLOAD AND FUEL ............. SET</h4></button>
+    <button class="item" onclick="removeItem(this, 'topic3')"><h4>ROUTE ......... LOAD/ACTIVATE/EXEC</h4></button>    
+    <button class="item" onclick="removeItem(this, 'topic3')"><p>RTE PAGE 2/2 ................... SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic3')"><p>DEP/ARR ........................ SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic3')"><p>LEGS ................... ROUTE CHECK</p></button>
+    <button class="item" onclick="removeItem(this, 'topic3')"><p>RTE/ PERF INIT> ........ REQUEST/SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic3')"><p>FMC COMM/DES FORECAST .. REQUEST/SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic3')"><p>FMC COMM/WIND .......... REQUEST/SET</p></button>
+    <button class="reset" onclick="resetTopic(this, 'topic3')"><p>Reset</p></button>
+</div>
+
+    
+<div class="topic-box" id="topic4">
+    <h2>EFIS/MCP Configuration</h2>    
+    <button class="item" onclick="removeItem(this, 'topic4')"><p>EFIS: QNH (ALTIMETER) .......... SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic4')"><p>EFIS: TRAFFIC - TFC ............. ON</p></button>
+    <button class="item" onclick="removeItem(this, 'topic4')"><p>EFIS: ARPT BUTTON ............... ON</p></button>
+    <button class="item" onclick="removeItem(this, 'topic4')"><p>MCP: FLIGHT DIRECTORS L AND R ... ON</p></button>
+    <button class="item" onclick="removeItem(this, 'topic4')"><p>MCP: HDG/TAKEOFF RWY ........... SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic4')"><p>MCP: INITIAL ALTITUDE .......... SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic4')"><p>AUTO BRAKE ..................... RTO</p></button>
+    <button class="item2"><p>(PREFLIGHT CHECKLIST)</p></button>    
+    <button class="reset" onclick="resetTopic(this, 'topic4')"><p>Reset</p></button>
+</div>
+
+<div class="topic-box" id="topic5">
+    <h2>Before Start Procedure</h2>
+    <button class="item" onclick="removeItem(this, 'topic5')"><p>ATC CLEARANCE (IFR) ........ REQUEST</p></button>
+    <button class="item" onclick="removeItem(this, 'topic5')"><p>TRANSPONDER .................... SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic5')"><p>TAXI AND TAKEOFF .......... BRIEFING</p></button>
+    <button class="item" onclick="removeItem(this, 'topic5')"><p>FLIGHT DECK DOOR ............. CLOSE</p></button>
+    <button class="item" onclick="removeItem(this, 'topic5')"><p>EFB: DOOR MANAG ...... CLOSE AND ARM</p></button>
+    <button class="item" onclick="removeItem(this, 'topic5')"><p><del>FMC ZFW ........................ SET</del></p></button>
+    <button class="item" onclick="removeItem(this, 'topic5')"><p>EFB: TAKEOFF PERFORM ..... CALCULATE</p></button>
+    <button class="item" onclick="removeItem(this, 'topic5')"><p>FMC: PERF INIT/THRUST LIM> ..... SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic5')"><p>FMC: TAKEOFF REF ............... SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic5')"><p>MCP: IAS SPEED .............. SET V2</p></button>
+    <button class="item" onclick="removeItem(this, 'topic5')"><p>MCP: LNAV/VNAV .................. ON</p></button>
+    <button class="item" onclick="removeItem(this, 'topic5')"><p>APU ................. CHECK ON/START</p></button>
+    <button class="item" onclick="removeItem(this, 'topic5')"><p>HYDRAULICS ................. ON/AUTO</p></button>
+    <button class="item" onclick="removeItem(this, 'topic5')"><h4>DEM R=AUTO/ELEC C1 C2/DEM L,C1,C2=AUTO</h4></button>
+    <button class="item" onclick="removeItem(this, 'topic5')"><p>NO SMOKING/NO ELECTRONIC ........ ON</p></button>
+    <button class="item" onclick="removeItem(this, 'topic5')"><p>SEAT BELTS ...................... ON</p></button>
+    <button class="item" onclick="removeItem(this, 'topic5')"><p>FUEL PUMPS ...................... ON</p></button>
+    <button class="item" onclick="removeItem(this, 'topic5')"><p>BEACON .......................... ON</p></button>
+    <button class="item" onclick="removeItem(this, 'topic5')"><p>TRANSPONDER .................. XPNDR</p></button>
+    <button class="item" onclick="removeItem(this, 'topic5')"><p>DSP: BOTTOM FTCL/ TRIM ......... SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic5')"><p>RECIRC FANS UPER AND LOWER .... *ON*</p></button>
+    <button class="item" onclick="removeItem(this, 'topic5')"><p>PACKS L AND R ................. *ON*</p></button>
+    <button class="item" onclick="removeItem(this, 'topic5')"><p>EFB: GROUND CONNECTIONS .... RELEASE</p></button>
+    <button class="item" onclick="removeItem(this, 'topic5')"><p>EFB: JETWAY ................ RELEASE</p></button>
+    <button class="item" onclick="removeItem(this, 'topic5')"><p>EFB: WHEEL CHOCKS ........... REMOVE</p></button>
+    <button class="item2"><p>(BEFORE START CHECKLIST)</p></botton>
+    <button class="reset" onclick="resetTopic(this, 'topic5')"><p>Reset</p></button>
+   
+</div>
+
+<div class="topic-box" id="topic6">
+    <h2>Engine Start Procedure</h2>
+    <button class="item" onclick="removeItem(this, 'topic6')"><p>PUSHBACK ................... REQUEST</p></button>
+    <button class="item" onclick="removeItem(this, 'topic6')"><p>ENGINE START SWITCH R ........ START</p></button>
+    <button class="item" onclick="removeItem(this, 'topic6')"><p>FUEL CONTROL R ................. RUN</p></button>
+    <button class="item" onclick="removeItem(this, 'topic6')"><p>ENGINE START SWITCH L ........ START</p></button>
+    <button class="item" onclick="removeItem(this, 'topic6')"><p>FUEL CONTROL L ................. RUN</p></button>
+    <button class="item" onclick="removeItem(this, 'topic6')"><p>FLAPS .......................... SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic6')"><p>APU ............................ OFF</p></button>
+    <button class="item" onclick="removeItem(this, 'topic6')"><p>ANTI-ICE ............... AS REQUIRED</p></button>
+    <button class="item" onclick="removeItem(this, 'topic6')"><p>DSP: BOTTOM FTCL ............. CHECK</p></button>
+    <button class="item" onclick="removeItem(this, 'topic6')"><p>DSP: BOTTOM RECALL ........... CHECK</p></button>   
+    
+    <button class="reset" onclick="resetTopic(this, 'topic6')"><p>Reset</p></button>
+    <button class="item2"><p>(BEFORE TAXI CHECKLIST)</p></botton>
+</div>
+
+<div class="topic-box" id="topic7">
+    
+    <h2>Before Taxi Procedure</h2>
+    <button class="item" onclick="removeItem(this, 'topic7')"><p>ATC CLEARANCE (TAXI) ....... REQUEST</p></button>
+    <button class="item" onclick="removeItem(this, 'topic7')"><p>TAXI LIGHTS ..................... ON</p></button>
+    <button class="item" onclick="removeItem(this, 'topic7')"><p>RUNWAY TURNOFF LIGHTS .. AS REQUIRED</p></button>
+    <button class="item" onclick="removeItem(this, 'topic7')"><p>AUXILIARY CAMERA LIGHT . AS REQUIRED</p></button>
+    <button class="item" onclick="removeItem(this, 'topic7')"><p>DOME LIGHT (STORM) .......... REDUCE</p></button>
+ 
+    <button class="reset" onclick="resetTopic(this, 'topic7')"><p>Reset</p></button>
+    <button class="item2"><p>(BEFORE TAKEOFF CHECKLIST)</p></botton>
+</div>
+
+<div class="topic-box" id="topic8">
+    
+    <h2>Before Takeoff Procedure</h2>
+    <button class="item" onclick="removeItem(this, 'topic8')"><p>ATC CLEARANCE (DEPART) ..... REQUEST</p></button>
+    <button class="item" onclick="removeItem(this, 'topic8')"><p>LANDING LIGHTS .................. ON</p></button>
+    <button class="item" onclick="removeItem(this, 'topic8')"><p>RUNWAY LIGHTS ................... ON</p></button>
+    <button class="item" onclick="removeItem(this, 'topic8')"><p>STROBE LIGHTS ................... ON</p></button>
+    <button class="item" onclick="removeItem(this, 'topic8')"><p>TRANSPONDER .................. TA/RA</p></button>
+    <button class="item" onclick="removeItem(this, 'topic8')"><p>AUXILIARY CAMERA LIGHT ......... OFF</p></button>
+    <button class="item" onclick="removeItem(this, 'topic8')"><p>WEATHER RADAR ................... ON</p></button>    
+    <button class="reset" onclick="resetTopic(this, 'topic8')"><p>Reset</p></button>
+</div>
+
+<div class="topic-box" id="topic9">
+    <h2>After Takeoff Procedure</h2>
+    <button class="item" onclick="removeItem(this, 'topic9')"><p>GEAR ............................ UP</p></button>
+    <button class="item" onclick="removeItem(this, 'topic9')"><p>CMD ......................... ENGAGE</p></button>
+    <button class="item" onclick="removeItem(this, 'topic9')"><p>FLAPS .................... RETRACTED</p></button>
+    <button class="item" onclick="removeItem(this, 'topic9')"><p>ANTI-ICE ................ AUTO/CHECK</p></button>
+    <button class="item2"><p>(AFTER TAKEOFF CHECKLIST)</p></botton>
+    <button class="item" onclick="removeItem(this, 'topic9')"><p>ALTIMETER ..... SET STD (29.92/1013)</p></button>
+    <h1>Passing 10,000 ft</h1>
+    <button class="item" onclick="removeItem(this, 'topic9')"><p>LANDING LIGHTS ................. OFF</p></button>
+    <button class="item" onclick="removeItem(this, 'topic9')"><p>RUNWAY LIGHTS .................. OFF</p></button>
+    <button class="item" onclick="removeItem(this, 'topic9')"><p>TAXI LIGHTS .................... OFF</p></button>
+    <button class="item" onclick="removeItem(this, 'topic9')"><p>LOGO LIGHT ..................... OFF</p></button>
+    <button class="item" onclick="removeItem(this, 'topic9')"><p>SEAT BELTS .................... AUTO</p></button>   
+    <button class="reset" onclick="resetTopic(this, 'topic9')"><p>Reset</p></button>
+</div>
+
+<div class="topic-box" id="topic10">
+    <h2>Cruise Procedure</h2>
+    <button class="item" onclick="removeItem(this, 'topic10')"><p>APPROACH BRIEFING .......... CONFIRM</p></button>
+    <button class="item" onclick="removeItem(this, 'topic10')"><p>MCP: ALTITUDE ................ RESET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic10')"><p>ARR ALTIMETER ............. SET/STBY</p></button>
+    <button class="item" onclick="removeItem(this, 'topic10')"><p>EFB: LANDING PERFORMANCE ..... CHECK</p></button>
+    <button class="item" onclick="removeItem(this, 'topic10')"><p>FUEL PREDICTION ................ SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic10')"><p>FMC: APPR SPEED REF ............ SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic10')"><p>BARO MIN ..................... CHECK</p></button>
+    <button class="item" onclick="removeItem(this, 'topic10')"><p>AUTO BRAKE ..................... SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic10')"><p>DSP: BOTTOM RECALL ........... CHECK</p></button>    
+    
+    <button class="reset" onclick="resetTopic(this, 'topic10')"><p>Reset</p></button>
+    <button class="item2"><p>(DESCENT CHECKLIST)</p></botton>
+</div>
+
+<div class="topic-box" id="topic11">
+    
+    <h2>Descent Procedure</h2>
+    <h1>Below 10,000 ft (MAX. 250 KIAS)</h1>
+    <button class="item" onclick="removeItem(this, 'topic11')"><p>LANDING LIGHTS .................. ON</p></button>
+    <button class="item" onclick="removeItem(this, 'topic11')"><p>RUNWAY LIGHTS ................... ON</p></button>
+    <button class="item" onclick="removeItem(this, 'topic11')"><p>TAXI LIGHTS ..................... ON</p></button>
+    <button class="item" onclick="removeItem(this, 'topic11')"><p>LOGO LIGHT ...................... ON</p></button>
+    <button class="item" onclick="removeItem(this, 'topic11')"><p>SEAT BELTS ...................... ON</p></button>
+    <button class="item" onclick="removeItem(this, 'topic11')"><p>ALTIMETER ........... RESET TO LOCAL</p></button>
+        
+    <button class="reset" onclick="resetTopic(this, 'topic11')"><p>Reset</p></button>
+    <button class="item2"><p>(APPROACH CHECKLIST)</p></botton>
+</div>
+
+<div class="topic-box" id="topic12">
+    
+    <h2>Approach Procedure</h2>
+    <button class="item" onclick="removeItem(this, 'topic12')"><p>FLAPS ......................... SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic12')"><p>APP ........................... ARM</p></button>
+    <button class="item" onclick="removeItem(this, 'topic12')"><p>SPEED BRAKE ................... ARM</p></button>
+    <button class="item" onclick="removeItem(this, 'topic12')"><p>LANDING GEAR ................. DOWN</p></button>
+    <button class="item" onclick="removeItem(this, 'topic12')"><p>GO-AROUND ALTITUDE ............ SET</p></button>
+    
+    <button class="reset" onclick="resetTopic(this, 'topic12')"><p>Reset</p></button>
+    <button class="item2"><p>(LANDING CHECKLIST)</p></botton>
+</div>
+
+<div class="topic-box" id="topic13">
+    
+    <h2>Landing Procedure</h2>
+    <button class="item" onclick="removeItem(this, 'topic13')"><p>SPEED BRAKE ............. RETRACTED</p></button>
+    <button class="item" onclick="removeItem(this, 'topic13')"><p>AUTO BRAKE .................... OFF</p></button>
+    <button class="item" onclick="removeItem(this, 'topic13')"><p>LANDING LIGHTS ................ OFF</p></button>
+    <button class="item" onclick="removeItem(this, 'topic13')"><p>RUNWAY LIGHTS ......... AS REQUIRED</p></button>
+    <button class="item" onclick="removeItem(this, 'topic13')"><p>STROBE LIGHTS ................. OFF</p></button>
+    <button class="item" onclick="removeItem(this, 'topic13')"><p>TRANSPONDER ................. XPNDR</p></button>
+    <button class="item" onclick="removeItem(this, 'topic13')"><p>FLAPS ................... RETRACTED</p></button>
+    <button class="item" onclick="removeItem(this, 'topic13')"><p>WEATHER RADAR ................. OFF</p></button>
+    <button class="item" onclick="removeItem(this, 'topic13')"><p>APU ......................... START</p></button>    
+    <button class="reset" onclick="resetTopic(this, 'topic13')"><p>Reset</p></button>
+</div>
+
+<div class="topic-box-final" id="topic14">
+    <h2>Parking / Shutdown Procedure</h2>
+    <button class="item" onclick="removeItem(this, 'topic14')"><p>PARKING BRAKE .................. ON</p></button>
+    <button class="item" onclick="removeItem(this, 'topic14')"><p>TAXI LIGHT AND RUNWAY LIGHTS .. OFF</p></button>
+    <button class="item" onclick="removeItem(this, 'topic14')"><p>FUEL CONTROL LEVERS ........... OFF</p></button>
+    <button class="item" onclick="removeItem(this, 'topic14')"><p>FASTEN BELTS .................. OFF</p></button>
+    <button class="item" onclick="removeItem(this, 'topic14')"><p>HYDRAULIC PUMPS ............... OFF</p></button>
+    <button class="item" onclick="removeItem(this, 'topic14')"><p>FUEL PUMPS .................... OFF</p></button>
+    <button class="item" onclick="removeItem(this, 'topic14')"><p>BEACON ........................ OFF</p></button>
+    <button class="item2"><p>(SHUTDOWN CHECKLIST)</p></botton>
+    <button class="item" onclick="removeItem(this, 'topic14')"><p>EFB: WHEEL CHOCKS ............. SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic14')"><p>EFB: GROUND CONNECTIONS ... REQUEST</p></button>
+    <button class="item" onclick="removeItem(this, 'topic14')"><p>EFB: DOOR MANAGEMENT .. DISARM/OPEN</p></button>
+    <button class="item" onclick="removeItem(this, 'topic14')"><p>FLIGHT DECK DOOR ............. OPEN</p></button>    
+    <button class="reset" onclick="resetTopic(this, 'topic14')"><p>Reset</p></button>
+</div>
+
+<script>
+    function removeItem(button, topicId) {
+        button.classList.add('hidden');
+        checkCompletion(topicId);
+    }
+
+    function resetTopic(button, topicId) {
+        var topic = document.getElementById(topicId);
+        var items = topic.querySelectorAll('.item');
+        items.forEach(function(item) {
+            item.classList.remove('hidden');
+        });
+        topic.classList.remove('completed');
+    }
+
+    function checkCompletion(topicId) {
+        var topic = document.getElementById(topicId);
+        var items = topic.querySelectorAll('.item');
+        var hiddenItems = topic.querySelectorAll('.item.hidden');
+        if (hiddenItems.length === items.length) {
+            topic.classList.add('completed');
+        } else {
+            topic.classList.remove('completed');
+        }
+    }
+</script>
+
+</body>
+</html>
