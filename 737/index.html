@@ -160,8 +160,9 @@
     <button class="item" onclick="window.open('../atr/index.html', '_self')"><p>ATR 72-600</p></button>
     <button class="item" onclick="window.open('../a310/index.html', '_self')"><p>A310-300</p></button>
     <button class="item" onclick="window.open('index.html', '_self')"><p>B737-800</p></button>
-    <button class="item" onclick="window.open('../737q/index.html', '_self')"><p>B737-800q</p></button>
+    <button class="item" onclick="window.open('../737q/index.html', '_self')"><p>*B737-800*</p></button>
     <button class="item" onclick="window.open('../777/index.html')"><p>B777-300er</p></button>
+    <button class="item" onclick="window.open('../777q/index.html')"><p>*B777-300er*</p></button>
     <button class="reset" onclick="window.open('../index.html', '_self')"><p>Home</p></button>
 </div>
 
@@ -193,28 +194,37 @@
 
 <div class="topic-box" id="topic2">
     <h2>FMC Configuration</h2>
+    <button class="item" onclick="removeItem(this, 'topic2')"><p>EFB: DATA FROM SIMBRIEF .... REQUEST</p></button>
     <button class="item" onclick="removeItem(this, 'topic2')"><p>POS INIT> ...................... SET</p></button>
     <button class="item" onclick="removeItem(this, 'topic2')"><p>RTE PAGE 1/2 ................... SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><h4>ORIGIN AND DEST .............. SET</h4></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><h4>ROUTE ................ REQUEST/SET</h4></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><h4>PAYLOAD AND FUEL ............. SET</h4></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><h4>ROUTE ......... LOAD/ACTIVATE/EXEC</h4></button>
     <button class="item" onclick="removeItem(this, 'topic2')"><p>RTE PAGE 2/2 ................... SET</p></button>
     <button class="item" onclick="removeItem(this, 'topic2')"><p>DEP/ARR ........................ SET</p></button>
     <button class="item" onclick="removeItem(this, 'topic2')"><p>LEGS ................... ROUTE CHECK</p></button>
-    <button class="item" onclick="removeItem(this, 'topic2')"><p>RTE/ PERF INIT> ................ SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><p>EFB: TAKEOFF PERFORM ..... CALCULATE</p></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><p>RTE/ PERF INIT> ........ <del>REQUEST</del>/SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><p>PERF INIT/ N1 LIMIT> ........... SET</p></button>
     <button class="item" onclick="removeItem(this, 'topic2')"><p>RTE/ TAKEOFF REF ............... SET</p></button>
-    <button class="item" onclick="removeItem(this, 'topic2')"><p>DES > FORECAST ................. SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic2')"><p>DES > FORECAST ......... REQUEST/SET</p></button>
     <button class="item" onclick="removeItem(this, 'topic2')"><p>ATC CLEARANCE (IFR) ........ REQUEST</p></button>
     <button class="reset" onclick="resetTopic(this, 'topic2')"><p>Reset</p></button>
 </div>
 
 <div class="topic-box" id="topic3">
-    <h2>MCP Configuration</h2>
-    <button class="item" onclick="removeItem(this, 'topic3')"><p>ALTIMETER ..................... SET</p></button>
-    <button class="item" onclick="removeItem(this, 'topic3')"><p>FLIGHT DIRECTORS ............... ON</p></button>
-    <button class="item" onclick="removeItem(this, 'topic3')"><p>AUTOTHROTTLE .................. ARM</p></button>
-    <button class="item" onclick="removeItem(this, 'topic3')"><p>IAS/MACH SPEED ............. SET V2</p></button>
-    <button class="item" onclick="removeItem(this, 'topic3')"><p>VNAV/LNAV ...................... ON</p></button>
-    <button class="item" onclick="removeItem(this, 'topic3')"><p>HDG/TAKEOFF RWY ............... SET</p></button>
-    <button class="item" onclick="removeItem(this, 'topic3')"><p>COURSE ........................ SET</p></button>
-    <button class="item" onclick="removeItem(this, 'topic3')"><p>FLIGHT ALTITUDE ............... SET</p></button>
+    <h2>EFIS/MCP Configuration</h2>
+    <button class="item" onclick="removeItem(this, 'topic3')"><p>EFIS: QNH (ALTIMETER) ......... SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic3')"><p>EFIS: TRAFFIC - TFC ............ ON</p></button>
+    <button class="item" onclick="removeItem(this, 'topic3')"><p>EFIS: ARPT BUTTON .............. ON</p></button>
+    <button class="item" onclick="removeItem(this, 'topic3')"><p>MCP: FLIGHT DIRECTORS L AND R .. ON</p></button>
+    <button class="item" onclick="removeItem(this, 'topic3')"><p>MCP: AUTOTHROTTLE ............. ARM</p></button>
+    <button class="item" onclick="removeItem(this, 'topic3')"><p>MCP: IAS/MACH SPEED ........ SET V2</p></button>
+    <button class="item" onclick="removeItem(this, 'topic3')"><p>MCP: VNAV/LNAV ................. ON</p></button>
+    <button class="item" onclick="removeItem(this, 'topic3')"><p>MCP: HDG/TAKEOFF RWY .......... SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic3')"><p>MCP: COURSE ................... SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic3')"><p>MCP: FLIGHT ALTITUDE .......... SET</p></button>
     <button class="item" onclick="removeItem(this, 'topic3')"><p>AUTO BRAKE .................... RTO</p></button>
     <button class="reset" onclick="resetTopic(this, 'topic3')"><p>Reset</p></button>
 </div>
@@ -307,15 +317,16 @@
 <div class="topic-box" id="topic10">
     <h2>Cruise Checklist</h2>
     <button class="item" onclick="removeItem(this, 'topic10')"><p><del>AIRPORT INFORMATION .......... CHECK</del></p></button>
-    <button class="item" onclick="removeItem(this, 'topic10')"><p>MCP ALTITUDE ................. RESET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic10')"><p>MCP: ALTITUDE ................ RESET</p></button>
     <button class="reset" onclick="resetTopic(this, 'topic10')"><p>Reset</p></button>
 </div>
 
 <div class="topic-box" id="topic11">
     <h2>Descent Checklist</h2>
     <button class="item" onclick="removeItem(this, 'topic11')"><p>ALTIMETER .............. SET/STANDBY</p></button>
-    <button class="item" onclick="removeItem(this, 'topic11')"><p>FMC ROUTE .................... CHECK</p></button>
-    <button class="item" onclick="removeItem(this, 'topic11')"><p>FMC APPR SPEED REF ............. SET</p></button>
+    <button class="item" onclick="removeItem(this, 'topic11')"><p>FMC: ROUTE ................... CHECK</p></button>
+    <button class="item" onclick="removeItem(this, 'topic11')"><p>EFB: LANDING PERFORMANCE ..... CHECK</p></button>
+    <button class="item" onclick="removeItem(this, 'topic11')"><p>FMC: APPR SPEED REF ............ SET</p></button>
     <button class="item" onclick="removeItem(this, 'topic11')"><p>LOCALIZER FREQ ................. SET</p></button>
     <button class="item" onclick="removeItem(this, 'topic11')"><p>ILS LOC COURSE ................. SET</p></button>
     <button class="item" onclick="removeItem(this, 'topic11')"><p>BARO MIN ....................... SET</p></button>
